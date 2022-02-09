@@ -1,10 +1,10 @@
 <script setup>
-
+import TroisJS from '../components/Renderer1.vue'
 </script>
 
 <template>
   <q-page>
-    <h1>TVV3Q says "hi"!</h1>
+    <TroisJS />
   </q-page>
 </template>
 
@@ -12,5 +12,7 @@
 .q-page {
   height: 100%;
   max-height: 100%;
+  width: 100%;
+  max-width: 100%;
 }
 </style>

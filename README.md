@@ -1,12 +1,6 @@
-# Starter template with Vite + Vue 3 + Typescript + Quasar
-
+# Starter template with Vite + Vue 3 + Typescript + Quasar + Trois.js
+## A Vue sandbox to get familiar with WebGL
 Tired of always starting from scratch? Lucky you!!! Use this repo to get quickly on tracks.
-
-You'll get an app that's ready for:
-- Vue 3 ('cause nothing feels like being up-to-date);
-- Vuex@4 (...oh yeah);
-- Vue-router@4 (...give it to me baby...);
-- Quasar (sweet responsive framework);
 
 ### Installation
 ```
@@ -14,7 +8,15 @@ cd frontend
 yarn
 ```
 
-### Development server
+#### This will install the fallowing:
+- [Vue 3](https://v3.vuejs.org/);
+- [Vuex@4](https://vuex.vuejs.org/);
+- [Vue-router@4](https://router.vuejs.org/);
+- [Quasar](https://quasar.dev/);
+- [Trois.js](https://troisjs.github.io/);
+
+### Run development server
+From ./frontend/ directory, run:
 ```
 yarn dev
 ```
