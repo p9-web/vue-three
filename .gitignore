@@ -1,0 +1,17 @@
+# Logs
+**/*.log*
+
+# Dependency directory
+# Commenting this out is preferred by some people, see
+**/node_modules
+
+# Editor directories and files
+.idea
+.vscode
+
+# Others
+**/dist/
+
+# local env files
+**/.env.local
+**/.env.*.local
