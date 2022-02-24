@@ -4,28 +4,36 @@ const state = () => ({
     visible: false,
     actions: [
         {
-            label: "Action 1",
+            label: "Settings",
             icon: "settings",
             color: "transparent",
             padding: "xs",
             externalLabel: true,
             glossy: true,
+            onClick: async (store) => {
+                await store.dispatch('panel/setContent', 'Settings')
+                await store.dispatch('panel/toggle', 'Settings')
+            }
         },
         {
-            label: "Action 1",
-            icon: "settings",
+            label: "Help",
+            icon: "help",
             color: "transparent",
             padding: "xs",
             externalLabel: true,
             glossy: true,
+            onClick: () => console.log('Help yourself!')
         }
     ]
 })
 
-const getters = {}
+const getters = {
+    isVisible: (state) => state.visible,
+    actions: (state) => state.actions
+}
 
 const actions = {
-    toggleMenu: ({ commit }) => {
+    toggle: ({ commit }) => {
         commit('TOGGLE_MENU')
     }
 }

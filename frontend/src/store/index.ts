@@ -1,7 +1,11 @@
 import { createStore } from 'vuex'
-import someModule from './modules/someModule'
 
-const state = () => ({})
+import menu from './modules/menu'
+import panel from './modules/panel'
+
+export interface State {}
+
+const state = (): State => ({})
 
 const getters = {}
 
@@ -10,7 +14,8 @@ const actions = {}
 const mutations = {}
 
 const modules = {
-    someModule,
+    menu,
+    panel,
 }
 
 export default createStore({

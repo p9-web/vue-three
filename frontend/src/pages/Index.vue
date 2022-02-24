@@ -1,10 +1,10 @@
 <script setup>
-import TroisJS from '../components/Renderer1.vue'
+import LogoRenderer from '../components/Renderer.vue'
 </script>
 
 <template>
   <q-page>
-    <TroisJS />
+    <LogoRenderer />
   </q-page>
 </template>
 

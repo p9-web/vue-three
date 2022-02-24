@@ -1,40 +1,42 @@
 const namespaced = true
 
-const state = () => ({
+interface State {
+    visible: boolean;
+    content: string;
+}
+
+const state = (): State => ({
     visible: false,
-    actions: [
-        {
-            label: "Action 1",
-            icon: "settings",
-            color: "transparent",
-            padding: "xs",
-            externalLabel: true,
-            glossy: true,
-        },
-        {
-            label: "Action 1",
-            icon: "settings",
-            color: "transparent",
-            padding: "xs",
-            externalLabel: true,
-            glossy: true,
-        }
-    ]
+    content: null,
 })
 
 const getters = {
-    menuActions: (state) => state.actions
+    isVisible: (state): boolean => state.visible,
+    content: (state): string => state.content,
 }
 
 const actions = {
-    toggleMenu: ({ commit }) => {
-        commit('TOGGLE_MENU')
+    toggle: ({ commit }) => {
+        commit('TOGGLE_PANEL')
+    },
+    close: ({ commit }) => {
+        commit('CLOSE_PANEL')
+        setTimeout(() => commit('SET_CONTENT', ''), 300)
+    },
+    setContent: ({ commit }, content: string) => {
+        commit('SET_CONTENT', content)
     }
 }
 
 const mutations = {
-    TOGGLE_MENU: (state) => {
+    TOGGLE_PANEL: (state) => {
         state.visible = !state.visible
+    },
+    CLOSE_PANEL: (state) => {
+        state.visible = false
+    },
+    SET_CONTENT: (state, content: string) => {
+        state.content = content !== state.content ? content : null
     }
 }
 
